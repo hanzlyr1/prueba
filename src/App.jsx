@@ -27,6 +27,8 @@ function App() {
           <Route path='/pokedex/:id' element={<PokedexInfo />} />
         </Route>
       </Routes>
+
+
     </div>
   )
 }

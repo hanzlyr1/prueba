@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import { Form, useNavigate } from 'react-router-dom'
 import Pagination from '../components/Pokedex/Pagination'
 import PokeCard from '../components/Pokedex/PokeCard'
+import './styles/pokedex.css'
 
 const Pokedex = () => {
     const { trainer } = useSelector(state => state)
@@ -21,7 +22,7 @@ const Pokedex = () => {
                 .catch(err => console.log(err))
         } else {
             //hacer la peticion de todos los pokemones
-            const URL = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=30'
+            const URL = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=10000'
             axios.get(URL)
                 .then(res => setPokemon(res.data.results))
                 .catch()
@@ -63,23 +64,29 @@ const Pokedex = () => {
 
 
     return (
-        <div>
-            <h2>Welcome {trainer}, here you can find your favorite pokemon</h2>
-            <form onSubmit={handleSubmit}>
-                <input type="text" id='search' />
-                <button>Search</button>
-            </form>
-            <select onChange={handleChange}>
-                <option>all pokemon</option>
-                {
-                    types?.map(type => (<option key={type.url} value={type.url}>{type.name}</option>))
-                }
-            </select>
-            <Pagination page={page} maxPage={maxPage} setPage={setPage} />
-            <div>
+        <div className='containerPoke' >
+            <h2 className='poke__h2'><span className='poke__span'>Welcome</span> <span className='poke__span--trainer' >  {trainer},</span> here you can find your favorite pokemon</h2>
+            <div className='poke__search'>
+                <form className='poke__form' onSubmit={handleSubmit}>
+                    <input className='poke__input' type="text" id='search' placeholder='look for a pokemon' />
+                    <button className='poke__button' >
+                        <i className="fa-sharp fa-solid fa-magnifying-glass poke__button-icons"></i>
+                    </button>
+                </form>
+                <select className='poke__select' onChange={handleChange}>
+                    <option className='poke__option'>all pokemon</option>
+                    {
+                        types?.map(type => (<option key={type.url} value={type.url}>{type.name}</option>))
+                    }
+                </select>
+            </div>
+            <div className='container-card'>
                 {
                     pokemon?.slice(initialPoke, finalePoke).map(poke => (<PokeCard key={poke.url} url={poke.url} />))
                 }
+            </div>
+            <div className='containerPagination'>
+                <Pagination page={page} maxPage={maxPage} setPage={setPage} />
             </div>
         </div>
     )

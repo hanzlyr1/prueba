@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './styles/pagination.css'
 const Pagination = ({ page, maxPage, setPage }) => {
 
     const pagesPerBlock = 6
@@ -31,17 +31,17 @@ const Pagination = ({ page, maxPage, setPage }) => {
 
 
     return (
-        <div>
-            <ul>
-                <li onClick={handlePrevious}>&#60;</li>
+        <div className='pagination'>
+            <ul className='pagination__list'>
+                <li className='pagination__item page__active ' onClick={handlePrevious}>  <i className="fa-sharp fa-solid fa-backward"></i> </li>
 
                 {
-                    arrPages.map(e => (<li onClick={() => handlePage(e)} key={e}>{e}</li>))
+                    arrPages.map(e => (<li className={`pagination__item  ${page === e && 'page__active'}`} onClick={() => handlePage(e)} key={e}>{e}</li>))
                 }
-                <li onClick={handleNext} >&#60;</li>
+                <li className='pagination__item  page__active' onClick={handleNext} ><i className="fa-sharp fa-solid fa-forward"></i></li>
 
             </ul>
-        </div>
+        </div >
     )
 }
 

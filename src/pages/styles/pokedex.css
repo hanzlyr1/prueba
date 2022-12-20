@@ -1,0 +1,140 @@
+.containerPoke {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.poke__span {
+    color: red;
+}
+
+.poke__h2 {
+    margin: 0.8em 0;
+    padding: 0.5em 0;
+}
+
+.poke__span--trainer {
+    text-transform: capitalize;
+    color: red;
+}
+
+.poke__search {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.poke__form {
+    background: rgb(33, 39, 82);
+    height: 50px;
+    border-radius: 60px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.poke__form:hover .poke__input {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.poke__form:hover .poke__button {
+    background-color: rgb(45, 46, 95);
+}
+
+
+.poke__button {
+    float: right;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgb(228, 228, 228);
+    border: 2px solid rgb(41, 64, 90);
+}
+
+.poke__input {
+    float: left;
+    font-size: 20px;
+    line-height: 50px;
+    color: rgb(235, 231, 231);
+    transition: 0.4s;
+    outline: none;
+    border: none;
+    background: none;
+    width: 0;
+    padding: 0;
+
+}
+
+
+
+.containerPagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.poke__select {
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    background: rgb(33, 39, 82);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    transition: .5s;
+    margin: 10px;
+    padding-left: 15px;
+}
+
+
+
+@media (max-width:800px) {
+    .poke__h2 {
+        margin: 5px;
+        padding: 10px;
+        text-align: center;
+    }
+
+
+    .poke__form:hover .poke__input {
+        width: 300px;
+    }
+
+
+    .poke__search {
+        flex-direction: column;
+    }
+
+    .poke__select {
+        margin: 15px 15px;
+        width: 90%
+    }
+
+
+    .container-card {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .poke-card {
+        max-width: 350px;
+        margin: auto;
+    }
+}
