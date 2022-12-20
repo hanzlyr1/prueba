@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { Route, Router, Routes } from 'react-router-dom'
 import './App.css'
 import ProtectedRouters from './components/ProtectedRouters'
+
 import Home from './pages/Home'
 import Pokedex from './pages/Pokedex'
 import PokedexInfo from './pages/PokedexInfo'
@@ -15,11 +16,13 @@ function App() {
 
   return (
     <div className="App">
+
       <Routes>
         <Route path='/' element={<Home />} />
 
         {/* Rutas Protegidas*/}
         <Route element={<ProtectedRouters />} >
+
           <Route path='/pokedex' element={<Pokedex />} />
           <Route path='/pokedex/:id' element={<PokedexInfo />} />
         </Route>
