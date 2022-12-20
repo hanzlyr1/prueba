@@ -1,0 +1,95 @@
+.poke-card {
+    width: 100%;
+    max-width: 340px;
+    border-radius: 0.7em;
+    border: 0.4em solid rgb(56, 123, 61);
+}
+
+.poke-card__header {
+    background-color: #aaa;
+    height: 120px;
+    position: relative;
+}
+
+.poke-card__sprite {
+    width: 50%;
+    left: 50%;
+    top: 10px;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.poke-card__body {
+    padding-top: 2.6em;
+}
+
+.poke-card__name {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.poke-card__types-container {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.poke-card__type {
+    position: relative;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 0.9em;
+}
+
+.poke-card__type:nth-child(2)::before {
+    content: "/";
+    position: absolute;
+    left: -12px;
+}
+
+.poke-card__footer {
+    padding: 1em 0.8em 2em;
+}
+
+.poke-card__stast-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 25px 5px;
+}
+
+.poke-card__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.poke-card__label {
+    text-transform: uppercase;
+    opacity: 0.8;
+    font-weight: 200;
+    font-size: 0.6rem;
+}
+
+.poke-card__baseStat {
+    font-weight: 200;
+}
+
+/*linear color*/
+.bg-grass {
+    background: linear-gradient(90deg, rgba(42, 62, 76, 1) 18%, rgba(33, 203, 89, 1) 87%);
+}
+
+.bg-fire {
+    background: linear-gradient(90deg, rgba(161, 112, 52, 1) 17%, rgba(219, 86, 9, 1) 67%);
+}
+
+.border-grass {
+    border-color: #70b181;
+}
+
+.color-grass {
+    color: #70b181;
+}
