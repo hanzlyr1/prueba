@@ -22,7 +22,6 @@ function App() {
 
         {/* Rutas Protegidas*/}
         <Route element={<ProtectedRouters />} >
-
           <Route path='/pokedex' element={<Pokedex />} />
           <Route path='/pokedex/:id' element={<PokedexInfo />} />
         </Route>
