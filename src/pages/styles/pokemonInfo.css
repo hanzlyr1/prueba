@@ -1,0 +1,19 @@
+.poke__info {
+    width: 100%;
+    max-width: 1024px;
+    margin: 40px auto;
+}
+
+.header__img {
+    width: 100%;
+    background-color: aqua;
+    height: 150px;
+    position: relative;
+}
+
+.header__img-img {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 400px;
+}
