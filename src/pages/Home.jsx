@@ -19,23 +19,32 @@ const Home = () => {
     }
 
     return (
+
         <div className='Home'>
-            <div className='Home__back'>
-                <img className='home__img--banner' src="/Home/pokedex.png" alt="" />
-            </div>
+            <div className='xd'>
+                <div className='Home__back'>
+                    <img className='home__img--banner' src="/Home/pokedex.png" alt="" />
+                </div>
+                <div className='home__containerinfo'>
+                    <div className='home__img trainer' >
+                        <h1 className='home__title'>Hi Trainer!</h1>
+                        <img className='home__img--trainer' src="/Trainer/trainer.png" alt="" />
+                    </div>
+                    <p className='home__parrafo'>enter your name</p>
+                    <div>
+                        <form className='home__form' onSubmit={handleSubmit}>
+                            <input className='home__input' id="name" type="text" placeholder='write your name' />
+                            <button className='home__button'><i className="fa-solid fa-arrow-right icons"></i></button>
+                        </form>
+                    </div>
+                </div>
 
-            <h1 className='home__title'>Hi Trainer!</h1>
-            <div className='home__img'>
-                <img className='home__img--trainer' src="/Trainer/trainer.png" alt="" />
-            </div>
-            <p className='home__parrafo'>Give e your name to star</p>
-            <form className='home__form' onSubmit={handleSubmit}>
-                <input className='home__input' id="name" type="text" placeholder='write your name' />
-                <button className='home__button'><i className="fa-solid fa-arrow-right icons"></i></button>
-            </form>
+                <HeaderPoker />
 
-            <HeaderPoker />
+            </div>
         </div>
+
+
     )
 }
 
