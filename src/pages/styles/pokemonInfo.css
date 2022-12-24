@@ -33,7 +33,7 @@
 .poke__info {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
-    grid-template-rows: 350px 180px 450px;
+    grid-template-rows: 350px 220px 450px;
     grid-template-areas: "header header  movi "
         "type  habilidades movi"
         "esta esta movi";
@@ -148,7 +148,7 @@
 }
 
 .poke__types-item {
-    padding: 15px;
+    padding: 10px;
     width: 150px;
     background-color: black;
     color: white;
@@ -159,7 +159,7 @@
 
     display: flex;
     justify-content: center;
-    align-content: flex-start;
+    align-content: center;
     gap: 0.5rem;
     height: 6.87rem;
     margin: 1px;
@@ -167,9 +167,189 @@
 }
 
 .poke__abilities-item {
-    padding: 15px;
+    padding: 10px;
     width: 150px;
     background-color: black;
     color: white;
     text-align: center;
+}
+
+.poke__stat-container {
+    display: grid;
+    gap: .7rem;
+    margin: 10px
+}
+
+.poke__info-bar {
+    width: 100%;
+    height: 20px;
+    background-color: rgb(36, 116, 116);
+    border-radius: 5px;
+    text-align: right;
+    position: relative;
+}
+
+.poke__info-hp {
+    width: 100%;
+    height: 20px;
+    background-color: rgb(87, 24, 150);
+    top: 0px;
+    position: absolute;
+}
+
+.poke__info-stat {
+    text-align: left;
+}
+
+
+.poke__info-spa {
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    background: rgb(44, 39, 39);
+    border-radius: 50%;
+    float: right;
+    margin-top: -15px;
+    margin-right: -18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+
+
+
+@media (min-width:900px)and (max-width: 1400px) {
+
+    .poke__info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 250px 200px 450px;
+        grid-template-areas: "header header"
+            "type  habilidades"
+            "esta esta"
+            "movi movi";
+        gap: 1rem;
+
+    }
+
+
+
+    .poke__info-data {
+
+        display: grid;
+        padding-top: 100px;
+        gap: 1rem;
+
+    }
+
+    .header__img {
+        grid-area: header;
+        background: rgba(174, 128, 128, 0.795);
+        border-radius: 7px;
+    }
+
+    .poke__info-typespoke {
+        grid-area: type;
+        background: #fff;
+
+        border-radius: 7px;
+    }
+
+    .poke__info-abilitiespoke {
+        grid-area: habilidades;
+        background: #fff;
+
+        border-radius: 7px;
+    }
+
+    .poke__info-containerstats {
+        grid-area: esta;
+        text-align: center;
+        background: #fff;
+        border-radius: 7px;
+    }
+
+    .poke__info-containermoves {
+        background: #fff;
+        grid-area: movi;
+        overflow: auto;
+        border-radius: 5px;
+    }
+
+    .poke__info-cont {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .poke__info-moveh1 {
+        text-align: center;
+    }
+
+    .poke__move-item {
+        border-radius: 10px;
+        font-size: 1.1rem;
+        padding: .4rem;
+        background-color: rgb(210, 206, 202);
+
+    }
+
+}
+
+@media (max-width:900px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        padding-top: 100px;
+        padding-bottom: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+    .poke__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__img-img {
+        width: 200px;
+    }
+
+    .poke__info-data {
+        width: 350px;
+        margin: 0 auto;
+    }
+
+    .poke__info-data {
+        margin-bottom: 1rem;
+        padding-top: 110px;
+    }
+
+    .poke__info-cont {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+
+
+    .poke__info-moveh1 {
+        text-align: center;
+    }
+
+    .poke__move-item {
+        border-radius: 10px;
+        font-size: 1.1rem;
+        padding: .4rem;
+        background-color: rgb(210, 206, 202);
+
+    }
+
+    .poke__info-containermoves {
+
+        max-height: 700px;
+    }
 }
