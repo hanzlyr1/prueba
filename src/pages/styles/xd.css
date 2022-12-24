@@ -1,0 +1,78 @@
+.HOE {
+    width: 100%;
+    height: 100%;
+    padding-top: 150px;
+    padding-bottom: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+
+.poke__info {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.header__img {
+    width: 100%;
+    background-color: aqua;
+    height: 100%;
+    position: relative;
+}
+
+.header__img-img {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.poke__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 350px 250px 450px;
+    grid-template-areas: "header header  movi "
+        "type  habilidades movi"
+        "esta esta movi";
+    gap: 20px;
+}
+
+
+.header__img {
+    grid-area: header;
+    background: rgba(174, 128, 128, 0.795);
+
+}
+
+.poke__info-containermoves {
+    background: #fff;
+
+    grid-area: movi;
+    overflow: auto;
+    border-radius: 5px;
+}
+
+.poke__info-typespoke {
+    grid-area: type;
+    background: #fff;
+
+    border-radius: 5px;
+}
+
+.poke__info-abilitiespoke {
+    grid-area: habilidades;
+    background: #fff;
+
+    border-radius: 5px;
+}
+
+.poke__info-containerstats {
+    grid-area: esta;
+    text-align: center;
+    background: #fff;
+
+    border-radius: 5px;
+}

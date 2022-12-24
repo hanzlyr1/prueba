@@ -4,3 +4,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
+
+.bg-grass {
+    background: linear-gradient(90deg, rgba(42, 62, 76, 1) 18%, rgba(33, 203, 89, 1) 87%);
+}

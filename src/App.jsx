@@ -1,6 +1,6 @@
 
 import { useSelector } from 'react-redux'
-import { Route, Router, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import ProtectedRouters from './components/ProtectedRouters'
 
@@ -15,7 +15,7 @@ function App() {
   console.log(trainer)
 
   return (
-    <div className="App">
+    <div className="App ">
 
       <Routes>
         <Route path='/' element={<Home />} />

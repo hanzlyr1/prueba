@@ -1,7 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import App from '../App'
 import './styles/pokemonInfo.css'
+
 
 
 const PokedexInfo = () => {
@@ -19,48 +21,76 @@ const PokedexInfo = () => {
     }, [id])
 
     console.log(pokemon)
+
+
+
     return (
-        <article className={`poke__info bg-${pokemon?.types[0].type.name}`} >
-            <header className='header__img'>
-                <img className='header__img-img' src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
-            </header>
-            <div className='poke__info-data'>
-                <h2>#{pokemon?.id}</h2>
-                <h3>{pokemon?.name}</h3>
-                <span>Peso</span>
-                <h3> {pokemon?.weight}</h3>
-                <span>Altura</span>
-                <h3> {pokemon?.height}</h3>
-            </div>
-            <ul>
-                {
-                    pokemon?.types.map(t => (<li>{t.type.name}</li>))
-                }
-            </ul>
-            <br />
-            <ul>
-                {
-                    pokemon?.abilities.map(a => (<li >{a.ability.name}</li>))
-                }
-            </ul>
-            <br />
-            <div>
-                <ul>
-                    {
-                        pokemon?.stats.map(s => (<li >{s.stat.name} : {s.base_stat}</li>))
-                    }
-                </ul>
-            </div>
-            <br />
+        <div className={`container bg-${pokemon?.types[0].type.name}`}>
+            <article className="poke__info" >
+                <header className='header__img'>
+                    <img className='header__img-img' src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
 
-            <div>
+                    <div className='poke__info-data'>
+                        <div className='poke__info-datawh'>
+                            <div className='poke__info-weight'>
+                                <h2> {pokemon?.weight}</h2>
+                                <span>Peso</span>
+                            </div>
+                            <div className='poke__info-height'>
+                                <h2> {pokemon?.height}</h2>
+                                <span>Altura</span>
+                            </div>
+                        </div>
+                        <div className='poke__info-datat'>
+                            <h1 className='poke__info-datah3' >{pokemon?.name}</h1>
+                            <h2 className='poke__info-datah2'>#{pokemon?.id}</h2>
+                        </div>
 
-                {
-                    pokemon?.moves.map(p => (<li >{p.move.name}</li>))
-                }
-            </div>
+                    </div>
+                </header>
 
-        </article >
+                <div className='poke__info-containermoves' >
+                    <h1 className='poke__info-moveh1'>Movements</h1>
+                    <ul className='poke__info-cont'>
+                        {
+                            pokemon?.moves.map(p => (<li key={p.move.url}>{p.move.name}</li>))
+                        }
+                    </ul>
+                </div>
+
+                <div className='poke__info-typespoke'>
+                    <h1 className='poke__info-h1'>Type</h1>
+                    <hr />
+                    <ul className='poke__types-container'>
+                        {
+                            pokemon?.types.map(t => (<li className='poke__types-item' key={t.type.url} >{t.type.name}</li>))
+                        }
+                    </ul>
+                </div>
+                <div className='poke__info-abilitiespoke'>
+                    <h1 className='poke__info-h1'>Abilities</h1>
+                    <hr />
+                    <ul className='poke__abilities-container'>
+                        {
+                            pokemon?.abilities.map(a => (<li className='poke__abilities-item' key={a.ability.url}  >{a.ability.name}</li>))
+                        }
+                    </ul>
+                </div>
+
+
+
+                <div className='poke__info-containerstats'>
+                    <h2>Estadisticas</h2>
+                    <ul>
+                        {
+                            pokemon?.stats.map(s => (<li key={s.stat.url} >{s.stat.name} : {s.base_stat}</li>))
+                        }
+                    </ul>
+                </div>
+            </article >
+
+        </div >
+
     )
 }
 
