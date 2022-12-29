@@ -1,6 +1,6 @@
 .Home {
     width: 100%;
-    background-color: aqua;
+
     height: 100%;
 }
 
@@ -28,17 +28,21 @@
 }
 
 .home__img {
-    width: 60%;
-    max-width: 600px;
+    width: 100%;
     height: auto;
     margin: 1.2rem auto;
     padding: 7px;
+    justify-content: center;
+    gap: 2rem;
+
 }
+
 
 .home__img--trainer {
     width: 100%;
     object-fit: contain;
     height: auto;
+    max-width: 200px;
 
 }
 
@@ -51,36 +55,33 @@
 }
 
 .home__form {
-    margin: 2.5rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    margin: 2rem 0;
 }
 
 .home__input {
-    line-height: 50px;
-    border: none;
     font-size: 17px;
-    background-color: #A7BEFA;
-    float: left;
-    border-radius: 15px 0 0 15px;
-    outline: none;
-    color: white;
-    padding-left: 1rem;
-    transition: .5s;
+    color: black;
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    border-radius: 14px;
+    box-shadow: 0 1px 7px;
+}
+
+.home__form-div {
+    width: 100%;
+    position: relative;
+
 }
 
 .home__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 55px;
-    height: 52px;
-    float: right;
-    padding: 1.2rem 0;
-    border-radius: 0 15px 15px 0;
-    background-color: #0e0a81df;
+    border-radius: 50%;
+    background-color: #e64343;
+    position: absolute;
+    top: -1px;
+    right: -8px;
+
+
 }
 
 .icons {
@@ -89,8 +90,8 @@
 
 .home__containerinfo {
 
-    width: 100%;
-    max-width: 370px;
+    width: 90%;
+
     margin: 0 auto;
 
 }
@@ -101,19 +102,19 @@
 
     .Home {
         width: 100%;
-        max-width: 1024px;
-        margin: 30px auto;
+
+
     }
 
     .home__containerinfo {
         width: 100%;
-        max-width: 1024px;
+
         margin: 0 auto;
 
     }
 
     .Home__back {
-        background-color: black;
+
         width: 100%;
         height: auto;
         display: flex;
@@ -131,8 +132,6 @@
     .home__img {
         display: flex;
         width: 100%;
-        max-width: 550px;
-        height: 400px;
         margin: 20px auto;
     }
 
@@ -141,46 +140,53 @@
         align-self: start;
     }
 
-    .home__form {
-        margin: 1rem 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .home__form-div {
         width: 100%;
+        max-width: 300px;
+        background-color: white;
+        margin: 0 auto;
     }
 
-    .home__input {
-        line-height: 50px;
-        border: none;
-        font-size: 17px;
-        background-color: #A7BEFA;
-        float: left;
-        border-radius: 15px 0 0 15px;
-        outline: none;
-        color: white;
-        padding-left: 1rem;
-        transition: .5s;
-        width: 400px;
+    .home__imput {
+        width: 100%;
+        max-width: 300px;
+        border: 10px solid black;
     }
 
-    .home__parrafo {
-        margin: 10px;
-    }
+
 
 
     .home__button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         width: 55px;
         height: 52px;
-        float: right;
-        padding: 1.2rem 0;
-        border-radius: 0 15px 15px 0;
-        background-color: #0e0a81df;
     }
 
     .icons {
         color: rgb(210, 214, 225);
     }
+
+
+}
+
+@media(max-width: 450px) {
+    .Home__back {
+        width: 100%;
+        height: 50px;
+    }
+
+    .home__img--trainer {
+        margin: 0 auto;
+    }
+
+    .home__imput {
+        position: relative;
+    }
+
+    .home__button {
+        position: absolute;
+        width: 20%;
+        height: 50px;
+        right: -13px;
+    }
+
 }

@@ -27,19 +27,22 @@ const Home = () => {
                 </div>
                 <div className='home__containerinfo'>
                     <div className='home__img trainer' >
-                        <h1 className='home__title'>Hi Trainer!</h1>
+
+                        <h1 className='home__title'>Hello Trainer!</h1>
+
                         <img className='home__img--trainer' src="/Trainer/trainer.png" alt="" />
                     </div>
-                    <p className='home__parrafo'>enter your name</p>
-                    <div>
+                    <p className='home__parrafo'>Give me your name to start</p>
+
+                    <div className='home__form-div'>
                         <form className='home__form' onSubmit={handleSubmit}>
-                            <input className='home__input' id="name" type="text" placeholder='write your name' />
+                            <input className='home__input' id="name" type="text" />
                             <button className='home__button'><i className="fa-solid fa-arrow-right icons"></i></button>
                         </form>
                     </div>
                 </div>
 
-                <HeaderPoker />
+
 
             </div>
         </div>
